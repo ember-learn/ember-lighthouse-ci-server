@@ -16,8 +16,10 @@ createServer({
     sqlConnectionSsl: true,
     sqlConnectionUrl: process.env.DATABASE_URL,
     sqlDialectOptions: {
-      ssl: true,
-      rejectUnauthorized: false,
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      }
     },
   },
 }).then(({port}) => console.log('Listening on port', port));
