@@ -15,6 +15,9 @@ createServer({
     sqlDialect: 'postgres',
     sqlConnectionSsl: true,
     sqlConnectionUrl: process.env.DATABASE_URL,
-    sqlDialectOptions: {ssl: true},
+    sqlDialectOptions: {
+      ssl: true,
+      rejectUnauthorized: false,
+    },
   },
 }).then(({port}) => console.log('Listening on port', port));
