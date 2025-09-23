@@ -2,6 +2,7 @@
   "name": "lhci",
   "version": "1.0.0",
   "main": "server.js",
+  "private": true,
   "dependencies": {
     "@lhci/server": "^0.7.0",
     "pg": "^8.5.1",
